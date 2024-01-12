@@ -1,5 +1,5 @@
 async function getDownloadLink({lessonID, lessonName}, echo360Domain, downloadHD) {
-  const classroomAppRegex = new RegExp('(classroomApp)');
+  const classroomAppRegex = new RegExp('(echoPlayerV2FullApp)');
   const dataRegex = /(?:\(\")(?:.*)(?:\"\))/;
   const lessonHTMLPageRequest = new Request(`${echo360Domain}/lesson/${lessonID}/classroom`, { method: 'GET', credentials: 'include' });
   const lessonHTMLPageResponse = await fetch(lessonHTMLPageRequest)
